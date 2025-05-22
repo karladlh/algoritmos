@@ -1,0 +1,35 @@
+//Importamos Scanner
+import java.util.*;
+
+public class AreaYPerimetroCirculo{
+
+     public static void main(String []args){
+    
+         Scanner scanner = new Scanner(System.in);
+         double radio;
+         System.out.println("Introduce radio del circulo: ");
+         //Obtenemos Valor del Radio
+         radio = scanner.nextDouble();
+         
+         //Llamamos a la funcion, le pasamos el valor del Radio
+         double areaDelCirculo = ObtenerAreaDeCirculo(radio);
+         //Imprimimos lo que nos devolvio la funcion (Un numero)
+         System.out.println("Area del Circulo: " + areaDelCirculo);
+         double perimetroDelCirculo = ObtenerPerimetroDelCirculo(radio);
+         System.out.println("Perimetro Del Circulo: " + perimetroDelCirculo);
+         
+         
+        
+     }
+     //Public = Quien puede usar la Clase, double = Devolvemos un numero
+     public static double ObtenerAreaDeCirculo(double radioFuncion){
+         double areaDelCirculo = 3.14 * radioFuncion * radioFuncion;
+         //Es el numero que regresa la funcion
+         return areaDelCirculo;
+     }
+     
+     public static double ObtenerPerimetroDelCirculo(double radioFuncion){
+         double perimetroDelCirculo = 2 * radioFuncion * 3.14;
+         return perimetroDelCirculo;
+     }
+}
